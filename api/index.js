@@ -5,7 +5,7 @@ const cors = require("cors");
 const express = require("express");
 const { MongoClient } = require("mongodb");
 
-let DATABASE_NAME = "cs193x_assign4";
+let DATABASE_NAME = "Cluster0";
 
 /* Do not modify or remove this line. It allows us to change the database for grading */
 if (process.env.DATABASE_NAME) DATABASE_NAME = process.env.DATABASE_NAME;
@@ -18,7 +18,7 @@ let Users, Posts;
 module.exports = async (app) => {
   app.set("json spaces", 2);
 
-  conn = await MongoClient.connect("mongodb+srv://wael:1234wael@Cluster9.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority", { useUnifiedTopology: true });
+  conn = await MongoClient.connect("mongodb+srv://wael:1234wael@cluster0.1e91g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useUnifiedTopology: true });
   db = conn.db(DATABASE_NAME);
   Users = db.collection("users");
   Posts = db.collection("posts");
