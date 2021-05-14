@@ -7,7 +7,8 @@ const path = require("path");
 const initApi = require("./api");
 const updater = require("./lib/server/updater");
 
-const PORT = 1930;
+//const PORT = 1930;
+const PORT = process.env.PORT || 80
 
 const app = express();
 const server = http.createServer(app);
