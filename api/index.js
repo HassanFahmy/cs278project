@@ -5,7 +5,7 @@ const cors = require("cors");
 const express = require("express");
 const { MongoClient } = require("mongodb");
 
-let DATABASE_NAME = "cluster0";
+let DATABASE_NAME = "Cluster0";
 
 /* Do not modify or remove this line. It allows us to change the database for grading */
 if (process.env.DATABASE_NAME) DATABASE_NAME = process.env.DATABASE_NAME;
