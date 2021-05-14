@@ -18,7 +18,7 @@ let Users, Posts;
 module.exports = async (app) => {
   app.set("json spaces", 2);
 
-  conn = await MongoClient.connect("mongodb://localhost", { useUnifiedTopology: true });
+  conn = await MongoClient.connect("mongodb+srv://wael:1234wael@Cluster9.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority", { useUnifiedTopology: true });
   db = conn.db(DATABASE_NAME);
   Users = db.collection("users");
   Posts = db.collection("posts");
