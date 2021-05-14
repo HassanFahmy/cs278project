@@ -22,7 +22,7 @@ module.exports = async (app) => {
   const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
   conn = await client.connect(err => { const collection = client.db("test").collection("devices"); client.close(); });
   
-  //conn = await MongoClient.connect("mongodb+srv://wael:1234wael@cluster0.1e91g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
+  conn = await MongoClient.connect("mongodb+srv://wael:1234wael@cluster0.1e91g.mongodb.net/myFirstDatabase?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true });
   db = conn.db(DATABASE_NAME);
   Users = db.collection("users");
   Posts = db.collection("posts");
