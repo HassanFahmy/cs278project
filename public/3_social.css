@@ -38,8 +38,18 @@ button {
   cursor: pointer;
 }
 
+
+button:visited {
+  background-color: #ffffff;
+}
+button:focus {
+  background-color: #ffffff;
+}
 button:hover {
   background-color: #1d7fcf;
+}
+button:active {
+  background-color: #ffffff;
 }
 
 button.secondary {

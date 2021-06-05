@@ -38,8 +38,11 @@ class App {
     this._nameContainer.addToDOM(document.querySelector("#nameContainer"), this._updateName);
     this._avatarContainer = new EditableText ("avatarInput");
     this._avatarContainer.addToDOM(document.querySelector("#avatarContainer"), this._updateAvatar);
-    this._listContainer = new DynamicList("eventlist");
+    this._listContainer = new DynamicList("Search for an event");
+    this._listContainer.addToDOM(document.querySelector("#eventContainer2"));
+    this._listContainer = new DynamicList("Enter friend's name here");
     this._listContainer.addToDOM(document.querySelector("#eventContainer"), this._onfollow, this._onUnfollow);
+
 
   }
 
